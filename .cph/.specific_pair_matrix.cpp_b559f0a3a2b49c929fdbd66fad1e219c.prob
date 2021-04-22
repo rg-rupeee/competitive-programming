@@ -1,0 +1,1 @@
+{"name":"Local: specific_pair_matrix","url":"f:\\cp vs code\\specific_pair_matrix.cpp","tests":[{"id":1617017758353,"input":"5\n1 2 -1 -4 -20\n-8 -3 4 2 1\n3 8 6 1 3\n-4 -1 1 7 -6\n0 -4 10 -5 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\cp vs code\\specific_pair_matrix.cpp","group":"local","local":true}

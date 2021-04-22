@@ -1,0 +1,62 @@
+/*
+author : Mr Rupesh Garhwal 
+id: rg_rupeee
+*/
+#include <bits/stdc++.h>
+using namespace std;
+  
+#define ll long long 
+#define ull unsigned long long
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+  
+#define MAX_N 1e5+1
+#define INF 1e9
+#define MOD 1e9+7
+#define LINF 1e18
+  
+#define rep(i,n) for (i = 0; i < n; ++i) 
+#define REP(i,a,n) for (i = a; i <= n; ++i)
+#define REPR(i,n,a) for (i = n; i >= a; --i) 
+  
+  
+void solve()
+{
+ // All The Best 
+ // Stay Focused 
+  int n;
+  int k;
+  cin>>n;
+  cin>>k;
+  int i;
+  int arr[n];
+  rep(i, n){
+    cin>>arr[i];
+  }
+  sort(arr, arr+n);
+  ll mn, mx, add, sub;
+  ll ans = arr[n-1]-arr[0];
+ 
+
+  for(i=1; i<n; i++){
+   
+    if(arr[i]>=k)  // since height of tower can't be -ve so taking only +ve heights
+    {
+        mn = min(arr[0]+k, arr[i]-k);
+        mx = max(arr[n-1]-k, arr[i-1]+k);
+        ans = min(ans, mx-mn);
+    }
+
+  }
+
+  cout<<ans<<endl;
+}
+  
+int main()
+{
+  
+   //fast_io;
+  
+   solve();
+  
+   return 0;
+}

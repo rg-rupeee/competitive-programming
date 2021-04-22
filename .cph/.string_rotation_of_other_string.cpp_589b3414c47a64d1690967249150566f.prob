@@ -1,0 +1,1 @@
+{"name":"Local: string_rotation_of_other_string","url":"f:\\cp vs code\\string_rotation_of_other_string.cpp","tests":[{"id":1618654594981,"input":"5\nabcde abcde\nabcde cdeab\na a\nab ba\nasdf adsf","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\cp vs code\\string_rotation_of_other_string.cpp","group":"local","local":true}

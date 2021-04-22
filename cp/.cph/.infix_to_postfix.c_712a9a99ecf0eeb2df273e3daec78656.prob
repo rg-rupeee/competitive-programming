@@ -1,0 +1,1 @@
+{"name":"Local: infix_to_postfix","url":"f:\\cp vs code\\infix_to_postfix.c","tests":[{"id":1608276224047,"input":"2\n15\n((A+B)*D)^(E-F)\n19\nA+(B*C-(D/E^F)*G)*H","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\cp vs code\\infix_to_postfix.c","group":"local","local":true}

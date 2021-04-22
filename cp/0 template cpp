@@ -1,0 +1,115 @@
+/*
+ author : Mr Rupesh Garhwal 
+ id: rg_rupeee
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long 
+#define ull unsigned long long
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+
+#define MAX_N 1e5+1
+#define INF 1e9
+#define MOD 1e9+7
+#define LINF 1e18
+
+
+#define rep(i,n) for (i = 0; i < n; ++i) 
+#define REP(i,a,n) for (i = a; i <= n; ++i) 
+#define REPR(i,n,a) for (i = n; i >= a; --i) 
+
+ int inline power(int a, int b, int p){
+    a %= p;
+    int ans = 1;
+    while(b>0){
+        if(b & 1)
+            ans = (ans*a)%p;
+        a = (a*a)%p;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int mod_inv(int n, int p){
+    return power(n,p-2, p);
+}
+
+bool inline isPrime(int n) {
+    if (n <= 1)  return false;
+    if (n <= 3)  return true;
+    if (n%2 == 0 || n%3 == 0) return false;
+    for (int i=5; i*i<=n; i=i+6)
+        if (n%i == 0 || n%(i+2) == 0)
+           return false;
+    return true;
+}
+
+
+template<typename T> void scan(T &x) 
+{ 
+    x = 0; 
+    bool neg = 0; 
+    register T c = getchar(); 
+  
+    if (c == '-') 
+        neg = 1, c = getchar(); 
+  
+    while ((c < 48) || (c > 57)) 
+        c = getchar(); 
+  
+    for ( ; c < 48||c > 57 ; c = getchar()); 
+  
+    for ( ; c > 47 && c < 58; c = getchar() ) 
+        x= (x << 3) + ( x << 1 ) + ( c & 15 ); 
+  
+    if (neg) x *= -1; 
+} 
+  
+template<typename T> void print(T n) 
+{ 
+    bool neg = 0; 
+  
+    if (n < 0) 
+        n *= -1, neg = 1; 
+  
+    char snum[65]; 
+    int i = 0; 
+    do
+    { 
+        snum[i++] = n % 10 + '0'; 
+        n /= 10; 
+    } 
+  
+    while (n); 
+    --i; 
+  
+    if (neg) 
+        putchar('-'); 
+  
+    while (i >= 0) 
+        putchar(snum[i--]); 
+  
+    putchar('\n'); 
+} 
+
+void solve()
+{
+  //all the best
+  
+}
+
+int main()
+{
+
+  //fast_io;
+
+  ull t;
+  cin>>t;
+  while(t--)
+  {
+    solve();
+  }
+  return 0;
+}
