@@ -42,7 +42,7 @@ void solve()
   // preprocess the aux matrix
   ll aux[n][m];
   aux[0][0] = mat[0][0];
-  
+
   for (j = 1; j < m; j++)
   {
     aux[0][j] = mat[0][j] + aux[0][j - 1];
@@ -59,32 +59,8 @@ void solve()
     }
   }
 
-  ll ans = 0;
-  for (int s = 1; s <= n && s <= m; s++)
-  {
-    // find the all submatrix of size = s*s
-    for (i = 0; i < n - s + 1; i++)
-    {
-      for (j = 0; j < m - s + 1; j++)
-      {
-        if (mat[i][j] >= k)
-        {
-          ans++;
-        }
-        else
-        {
-          ll average;
-          ll a, b;
-          ll sum = 0;
-
-          // calculate sum and average
-          ll li, lj, ri, rj;
-          li = i;
-          lj = j;
-          ri = i + s - 1;
-          rj = j + s - 1;
-
-          // find sum between (li, lj) and (ri, rj)
+  /**
+    // find sum between (li, lj) and (ri, rj)
           sum = aux[ri][rj];
           if (li > 0)
           {
@@ -98,16 +74,10 @@ void solve()
           {
             sum = sum + aux[li - 1][lj - 1];
           }
-          average = sum / (s * s);
-          if (average >= k)
-          {
-            ans++;
-            // now all remaining subsets will also have same average
-          }
-        }
-      }
-    }
-  }
+  */
+
+  ll ans = 0;
+  
   cout << ans << '\n';
 }
 
