@@ -23,28 +23,16 @@ void solve()
 {
  // All The Best 
  // Stay Focused 
-  ll n, m;
-  cin>>n>>m;
-  // cout<<n<<" "<<m;
-
-  ll i, j, ans=0, a1, a2;
-  for(i=1; i<=n; i++){
-    for(j=i+1; j<=n; j++){
-
-      a1 = m%i;
-
-      a2 = m%j;
-      a2 = a2%i;
-     
-      if(a1 == a2){
-        cout<<a1<<" "<<a2<<'\n';
-        cout<<i<<" "<<j<<'\n';
-        ans++;
-      }
-    }
+  ll k;
+  cin>>k;
+  ll sum=0;
+  ll i, ai, ai1;
+  for(i=1; i<=2*k; i++){
+    ai = k+pow(i, 2);
+    ai1 = k+pow(i+1, 2);
+    sum += __gcd(ai, ai1);
   }
-
-  cout<<ans<<'\n';
+  cout<<sum<<'\n';
 }
   
 int main()
@@ -55,7 +43,7 @@ int main()
    // Printing the Output to output.txt file
    // freopen("output.txt", "w", stdout);
   
-  //  fast_io;
+   fast_io;
   
    ull t;
    cin>>t;
