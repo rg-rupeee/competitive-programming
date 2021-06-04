@@ -18,37 +18,46 @@ using namespace std;
 #define REP(i,a,n) for (i = a; i <= n; ++i)
 #define REPR(i,n,a) for (i = n; i >= a; --i) 
   
-void solveNaive()
+  
+void solve()
 {
  // All The Best 
  // Stay Focused 
-  ll n, m;
-  cin>>n>>m;
-  // cout<<n<<" "<<m;
-  ll i, j, ans=0, a1, a2;
-  for(i=1; i<=n; i++){
-    for(j=i+1; j<=n; j++){
 
-      a1 = m%i;
-      // a1 = a1%j;
+  ll N = 100001;
 
-      a2 = m%j;
-      a2 = a2%i;
-     
-      if(a1 == a2){
-        // cout<<i<<" "<<j<<'\n';
-        ans++;
+  ll p[N];
+
+  memset(p, 0, sizeof(p));
+
+  ll i, j;
+
+  p[2] = 1;
+  for(i=3; i<=N; i=i+2){
+    p[i] = 1;
+  }
+
+  for(i=3; i<=sqrt(N); i=i+2){
+    if(p[i] == 1){
+      for(j=i*i; j<=N; j=j+i){
+        p[j] = 0;
       }
     }
   }
 
-  cout<<ans<<'\n';
-}
 
-void solveOptimized(){
+  // print all prime numbers
+  cout<<"All Primes numbers :"<<'\n';
+  for(i=1; i<N; i++){
+    // cout<<i<<" "<<p[i]<<endl;
+    if(p[i]){
+      cout<<i<<"  ";
+    }
+  }
 
-}
-
+  cout<<'\n';
+} 
+  
 int main()
 {
   
@@ -58,13 +67,9 @@ int main()
    // freopen("output.txt", "w", stdout);
   
   //  fast_io;
+
+    // cout<<"adfa"<<'\n';
+   solve();
   
-   ull t;
-   cin>>t;
-   while(t--)
-   {
-     solveNaive();
-    //  solveOptimized();
-   }
    return 0;
 }
