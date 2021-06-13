@@ -88,6 +88,7 @@ void printPrimes(ll l, ll r, vector<int> &primes)
       isPrime[j - l] = false;
     }
 
+    // special case when base = 0 then base becomes equal to current prime no and we make it false so again making it true
     if (base == currentPrime)
     {
       isPrime[base - l] = true;
